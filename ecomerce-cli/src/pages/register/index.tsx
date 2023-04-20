@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './Register.module.scss';
 import http2 from '../../http2';
+import { useNavigate } from 'react-router-dom';
 
 const strengthLabels = ['fraca', 'media', 'forte'];
 
@@ -10,6 +11,7 @@ export default function Register() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [passwordConfirmed, setPasswordConfirmed] = useState('');
+	const navigate = useNavigate();
 
 	const getStrength = (password: string) => {
 		console.log(password);
@@ -58,6 +60,7 @@ export default function Register() {
 				setEmail('');
 				setPassword('');
 				setPasswordConfirmed('');
+				navigate('/login',  {replace: true});
 			})
 			.catch(() => {
 				alert('OPS! Alguma coisa deu errado!');

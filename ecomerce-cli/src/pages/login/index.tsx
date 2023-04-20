@@ -38,7 +38,7 @@ export default function Signup(props: Props) {
 				}));
 				setToken(response.data.token.access_token);
 				setUserLogado(true);
-				navigate('/');
+				navigate('/', {replace: true});
 			})
 			.catch(erro => {
 				if (erro?.response?.data?.message) {

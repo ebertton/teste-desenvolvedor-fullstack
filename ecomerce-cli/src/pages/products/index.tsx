@@ -21,9 +21,18 @@ export default function Products(props: Props) {
 	const [ordination, setOrdination] = useState('');
 	const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 	const [provider, setProvider] = useState<number | null>(null);
-	const [products, setProducts] = useState<IProduct[]>([]);
+
+
+
 	const categorysList = useSelector((state: RootState) => state.categorys);
 	const dispatch = useAppDispatch();
+
+	const [productsEuropean, setProductsEuropean] = useState<IProduct[]>([]);
+
+	const [productsBrazilian, setProductsBrazilian] = useState<IProduct[]>([]);
+
+	const [products, setProducts] = useState<IProduct[]>([]);
+
 	useEffect(() => {
 		http.get<IProduct[]>('brazilian_provider')
 			.then(response => {
@@ -35,7 +44,7 @@ export default function Products(props: Props) {
 					}
 				});
 				dispatch(setCategorys(categorys));
-				setProducts(response.data);
+				setProductsBrazilian(response.data);
 			})
 			.catch(erro => console.log(erro));
 		http.get<IProductFornecedorEuropean[]>('european_provider')
@@ -56,17 +65,26 @@ export default function Products(props: Props) {
 						quantidadeEstoque: 10,
 						imagem: option.gallery[0],
 					});
-					
+
 					if (categorysList.categorys.indexOf(option.details.adjective) === -1) {
 						categorys.push(option.details.adjective);
 					}
-				
-					setProducts(products);
 				});
+				setProductsEuropean(api2);
+
 				dispatch(setCategorys([...categorysList.categorys, ...categorys]));
+
 			})
 			.catch(erro => console.log(erro));
+
+		
 	}, []);
+
+
+
+	useEffect(() => {
+		setProducts([...productsBrazilian, ...productsEuropean]);
+	}, [productsBrazilian, productsEuropean]);
 
 
 	return (

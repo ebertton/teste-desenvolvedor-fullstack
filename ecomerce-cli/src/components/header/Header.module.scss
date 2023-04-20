@@ -1,0 +1,95 @@
+.mainHeader {
+    padding: 10px 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+    &__filters{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 20px 0;
+
+    }
+}
+
+.mainHeaderTitle {
+    font-size: 80px;
+    letter-spacing: -1.5px;
+}
+
+
+
+.mainHeaderMenu {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        padding-bottom: 10px;
+    }
+}
+
+.mainHeaderMenu {
+    a {
+        padding: 10px 10px;
+        color: var(--gray);
+        font-weight: 400;
+        font-size: 22px;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.mainHeaderMenu {
+    a:hover {
+        background-color: var(--blue);
+        color: #fff;
+    }
+}
+
+.containerMenu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    flex: 1;
+}
+
+.badgeCarrinho {
+    background-color: var(--dark-blue);
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.searchForm {
+    height: 44px;
+    display: flex;
+}
+
+.searchForm {
+    input {
+        box-sizing: border-box;
+        height: 56px;
+        padding: 28px;
+        flex: 1;
+        background-color: var(--light-gray);
+        color: var(--gray);
+        border: none;
+        transition: all -3s ease-in-out;
+        font-size: 22px;
+    }
+}
+
+.searchForm {
+    button {
+        width: 56px;
+        height: 56px;
+        background-color: var(--blue);
+        border: none;
+        color: #fff;
+        font-size: 22px;
+    }
+}
+

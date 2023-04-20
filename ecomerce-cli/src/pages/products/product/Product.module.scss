@@ -1,0 +1,87 @@
+.product {
+    &__container {
+        display: flex;
+        column-gap: 20px;
+        margin: 20px 0;
+    }
+
+    &__container img {
+        width: 350px;
+        height: 350px;
+    }
+
+    &__name {
+        font-size: 36px;
+    }
+
+    &__price {
+        font-size: 28px;
+        font-weight: 400;
+        margin: 20px 0 20px;
+    }
+
+    &__avaiability {
+        font-size: 12px;
+    }
+}
+
+.productImage {
+    &__container {
+        align-self: center;
+    }
+}
+
+
+.productDescription {
+    &__container {
+        border: 1px solid var(--light-gray);
+
+
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 8px;
+        flex: 1;
+        background-color: white;
+
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        label {
+            margin: 20px 0;
+            display: block;
+        }
+
+        input {
+            width: 30px;
+            padding: 5px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        button {
+            background-color: var(--blue);
+            border: none;
+            padding: 10px;
+            color: white;
+            font-size: 24px;
+            transition: .3s all;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            filter: brightness(1.3);
+        }
+        .buttonRemove {
+            background-color: var(--orange) !important;
+        }
+    }
+}

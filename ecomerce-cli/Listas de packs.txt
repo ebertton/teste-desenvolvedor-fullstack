@@ -1,0 +1,6 @@
+typescript-plugin-css-modules 5.0.1 para evitar problemas de sobrescrita de css
+fortawesome "^6.4.0" para utilizar os icones 
+
+    background-color: #6af0b5;
+    border-color: #6af0b5;
+    color: #4d2e55;

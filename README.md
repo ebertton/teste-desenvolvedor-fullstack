@@ -25,7 +25,7 @@ A aplicação utiliza das seguintes dependências:
 - laravel/framework ^9.11 para desenvolvimento sa API. 
 - php-open-source-saver/jwt-auth ^1.4 para a criação de token JWT, garantindo maior segurança no módulo de autenticação dos usuários.
 
-## Pré requisitos para inatalação:
+## Pré requisitos para instalação:
 - PHP 8.0.2+
 - MySQL 5.7+ 
 - Node v18.15.0+
@@ -46,7 +46,7 @@ Criando a base de dados
 - Conecte-se ao servidor MySQL: mysql -u [username] -p[password]
 - Crie a base de dados: CREATE DATABASE [database_name]
 
-Configuranrando o .env
+Configurando o .env
 
 ### 1 - `Faça um copiar do arquivo .env.exemple e renomei para .env`
 ### 2 - `No arquivo .env em DB_DATABASE insira o nome da base de dados mysql `
@@ -62,7 +62,7 @@ Acessando o projeto no diretório "ecommerce" execute os comandos na ordem:
 A API ficará disponível na seguinte URL [http://localhost:8000](http://localhost:8000).\
 
 Utilizando docker para startar o servidor:
-- Na raiz do projto após ter executado o comando `composer install` e `php artisan generat:key`, execute os seguintes comandos:
+- Na raiz do projeto após ter executado o comando `composer install` e `php artisan generat:key`, execute os seguintes comandos:
 ### 1 - `php artisan sail:install`
 ### 2 - `Opção [0]`
 ### 3 - `./vendor/bin/sail up -d`

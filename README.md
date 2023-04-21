@@ -1,6 +1,6 @@
 # Sobre o Projeto
 
-Com base nos requisitos mínimos desenvolvi uma aplicação de e-comerce.\
+Com base nos requisitos mínimos desenvolvi uma aplicação de e-commerce.\
 Ele atende todos os requisitos solicitados tentando aplicar da melhor forma possível para fazer sentido no fluxo de navegação.
 
 Para que a aplicação seja executada sem erros é necessário o instalar o node.js versão 18+ em seu sistema(https://nodejs.org/en/download/) e ter o mysql 5.7+ instalado em seu ambiente local.
